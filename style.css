@@ -1,8 +1,9 @@
 body {
-    background-color: white;  
+    color-scheme: dark;
+    background-color: rgb(20, 20, 20);  
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #24292f;      
+    color: rgb(200,200,200);      
     line-height: 1.5;   
     margin: 0px 25px 25px;
 }
@@ -14,7 +15,7 @@ h3 {
 }
 
 code {
-    background-color: whitesmoke;
+    background-color: #2A3439;
     border-radius: 6px;
     padding: 0.1em;
 }
@@ -23,9 +24,15 @@ code {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 2em;
+    
 }
 
-.table-of-content a{
+.table-of-content a {
     text-decoration: none;
     color: dodgerblue;
+    transition: 0.5s;
+}
+
+.table-of-content :hover {    
+    color: #8fc8ff;
 }
