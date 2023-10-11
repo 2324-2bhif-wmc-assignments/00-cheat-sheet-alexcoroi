@@ -55,7 +55,9 @@ pre {
 .cards-holder {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;      
+    gap: 8px;
+    justify-content: center;
+    align-items: center;    
 }
 
 .cards-holder > a {
