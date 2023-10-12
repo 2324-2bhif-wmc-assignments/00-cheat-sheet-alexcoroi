@@ -5,7 +5,7 @@ body {
     font-size: 16px;
     color: rgb(200,200,200);      
     line-height: 1.5;   
-    margin: 0px 25px 25px;
+    margin: 0px 25px 25px;    
 }
 
 h1,
@@ -39,17 +39,26 @@ pre {
 .table-of-content {
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 2em;    
+    padding-left: 0em;   
+    list-style-type: none;
+}
+
+.table-of-content li {
+    margin-top: 15px;
 }
 
 .table-of-content a {
+    background-color: rgb(23, 23, 23);
+    border: 2px rgba(255, 255, 255, 0.1) solid;
+    border-radius: 10px;
     text-decoration: none;
     color: dodgerblue;
-    transition: 0.3s;  
+    transition: 0.5s;
+    padding: 7.5px;
 }
 
-.table-of-content :hover {    
-    color: #8fc8ff;
+.table-of-content a:hover {    
+    border: 3px solid cornflowerblue;
 }
 
 .cards-holder {
@@ -57,7 +66,6 @@ pre {
     flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
-    align-items: center;    
 }
 
 .cards-holder > a {
@@ -74,7 +82,14 @@ pre {
     height: 260px;
     flex-direction: column;
     position: relative;
-    width: 300px;    
+    width: 300px;  
+    vertical-align: middle;
+    transition: 0.5s;  
+}
+
+.card:hover {
+    width: 400px;
+    height: 300px;
 }
 
 .card::after {
