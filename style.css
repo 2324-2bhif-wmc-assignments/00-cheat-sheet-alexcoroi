@@ -33,7 +33,9 @@ pre {
     max-width: 100%;  
     width: fit-content;    
     overflow: auto;
-    white-space: pre-wrap;
+    text-align: left;
+    white-space: pre;
+    margin: 0;
 }
 
 .table-of-content {
