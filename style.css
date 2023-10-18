@@ -116,7 +116,7 @@ pre {
     text-align: center;
 }
 
-.card-content #icon {
+.card-content > .card-icon {
     width: 100px;
     height: 100px; 
 }
