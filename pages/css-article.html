@@ -11,13 +11,13 @@
         <article class="cheatsheet-article">            
             <h1>CSS</h1>
             <h4>Table of content</h4>
-            <ul class="table-of-content">
-                <li><a href="#general">General</a></li>
-                <li><a href="#combinators">Combinators</a></li>
-                <li><a href="#text-formatting">Text Formatting</a></li>
-                <li><a href="#background-formatting">Background Formatting</a></li>
-                <li><a href="#pseudo-classes">Pseudo Classes</a></li>
-            </ul>
+            <div class="table-of-content">
+                <a href="#general">General</a>
+                <a href="#combinators">Combinators</a>
+                <a href="#text-formatting">Text Formatting</a>
+                <a href="#background-formatting">Background Formatting</a>
+                <a href="#pseudo-classes">Pseudo Classes</a>
+            </div>
             <section id="general">
                 <h3>General</h3>
                 <p>
@@ -32,30 +32,30 @@
                 </p>
                 <pre>
                     selector {
-                        declaration (property : value);
-                        declaration2 (property2 : value);
+                        &nbsp;declaration (property : value);
+                        &nbsp;declaration2 (property2 : value);
                     }                   
                 </pre>
             </section>
             <section id="combinators">
                 <h3>Combinators</h3>
-                <p>There are 4 combinators: descendant, direct child, adjacent sibling, sibling.</p>
+                <p>There are 4 combinators: descendant, direct child, adjacent sibling, sibling.</p>                
                 <pre>
                     section p { /*All &lt;p&gt; in section are selected*/
-                        font-size = 13px;
+                        &nbsp;font-size = 13px;
                     }
-                                             
+                                                        
                     section > p { /*All &lt;p&gt; that are direct childs of section are selected*/
-                        font-size = 16px;
+                        &nbsp;font-size = 16px;
                     }
-                                             
+                                                        
                     section + p { /*The first &lt;p&gt; after the section element is selected*/
-                        font-size = 12px;
+                        &nbsp;font-size = 12px;
                     }
-                                             
+                                                        
                     section ~ p { /*All next siblings to section that are &lt;p&gt; are selected*/
-                        font-size = 14px;
-                    }                   
+                        &nbsp;font-size = 14px;
+                    }                                   
                 </pre>
             </section>
             <section id="text-formatting">
