@@ -7,6 +7,18 @@ body {
     line-height: 1.5;   
     margin: 0px 25px 25px;    
 }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cheatsheet-article {
+    animation: 0.4s ease-out 0s 1 fadeIn;
+}
 
 h1,
 h2,
@@ -51,7 +63,7 @@ pre {
     color: dodgerblue;
     transition: 0.5s linear;
     padding: 2px 7.5px 2px 7.5px;
-    margin: 1px;
+    margin: 1.5px;
 }
 
 .table-of-content a:hover {    
@@ -120,4 +132,69 @@ pre {
 
 .card-content > p {
     color: rgb(170, 170, 170);
+}
+
+.nav-bar {
+    display: flex;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+    padding: 0.5rem 0px 0.5rem 0px;
+}
+
+.nav-bar h1 {
+    border: 0;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.nav-bar-container {
+    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-bar-container a {
+    color: rgb(200,200,200);  
+    display: flex;
+    min-width: 5rem;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.4s;
+    justify-content: center;
+}
+
+.nav-bar-container a:hover { 
+    border: 2px solid cornflowerblue;
+}
+
+@keyframes expand {
+    0% {
+        width: 5rem;
+    }
+    100% {
+        width: 7%;
+    }
+}
+
+.nav-bar-container > .nav-bar-active { 
+    animation: 0.4s ease-out 0s 1 expand;
+    width: 7%;
+    border: 2px solid cornflowerblue;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 0.5rem;
+    border: 2px rgba(255, 255, 255, 0.1) solid;
 }
