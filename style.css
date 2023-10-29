@@ -1,22 +1,28 @@
 :root {
-    --background-color: #ebebeb;
-    --card-background-color: rgb(232, 232, 232);
-    --header-line-color: #ded9d2;
-    --border-color: rgba(0, 0, 0, 0.1);
-    --text-color: rgb(55,55,55);
-    --text-color-secondary: rgb(85, 85, 85);
-
     --corner-radius: 10px;
     --corner-radius-secondary: 6px;
 }
 
-body[data-theme="dark"] {
-    --background-color: #141414;
-    --card-background-color: rgb(23, 23, 23);
-    --header-line-color: #21262d;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --text-color: rgb(200,200,200);
-    --text-color-secondary: rgb(170, 170, 170);
+@media (prefers-color-scheme: light) {
+    body {
+        --background-color: rgb(255,255,255);
+        --card-background-color: rgb(252, 252, 252);
+        --header-line-color: #ded9d2;
+        --border-color: rgba(0, 0, 0, 0.1);
+        --text-color: rgb(55,55,55);
+        --text-color-secondary: rgb(85, 85, 85);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: #141414;
+        --card-background-color: rgb(23, 23, 23);
+        --header-line-color: #21262d;
+        --border-color: rgba(255, 255, 255, 0.1);
+        --text-color: rgb(200,200,200);
+        --text-color-secondary: rgb(170, 170, 170);
+    }
 }
 
 body {
