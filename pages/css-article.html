@@ -25,6 +25,7 @@
                 <a href="#text-formatting">Text Formatting</a>
                 <a href="#background-formatting">Background Formatting</a>
                 <a href="#pseudo-classes">Pseudo Classes</a>
+                <a href="#box-model">Box Model</a>
             </div>
             <section id="general">
                 <h3>General</h3>
@@ -145,6 +146,35 @@
                     </li>
                 </ul>
                 <p>Note that it is important to write this pseudo classes in this order to function correctly.</p>
+            </section>
+            <section id="box-model">
+                <h3>Box Model</h3>
+                <p>
+                    The box model is a model that describes the content of an element.
+                    It consists of the following parts: 
+                </p>
+                <ul>
+                    <li><strong>Content</strong>: The content of the element, where text and images appear</li>
+                    <li><strong>Padding</strong>: Is the space between the content and the border. The padding is transparent</li>
+                    <li><strong>Border</strong>: A border that goes around the padding and content</li>
+                    <li><strong>Margin</strong>: Is the space between the border and other content. The margin is transparent</li>
+                </ul>
+                <p>
+                    In addition to the box model, a distinction can be made between inline and block elements.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Inline elements</strong>: Do not start on a new line and only take up as much width as necessary. 
+                        Following elements are inline elements per default: <code>img</code>, <code>strong</code>, <code>em</code>, <code>span</code>.
+                    </li>
+                    <li>
+                        <strong>Block elements</strong>: Start on a new line and take up as much width as possible. 
+                        Following elements are block elements per default: <code>article</code>, <code>section</code>, <code>p</code>, <code>h1-6</code>, <code>div</code>.
+                    </li>
+                </ul>
+                <p>
+                    The display type (inline/block) can be changed with the <code>display</code> property.
+                </p>
             </section>
         </article>
     </body>
