@@ -1,37 +1,40 @@
 :root {
+    color-scheme: light;
+    --background-color: rgb(255,255,255);
+    --card-background-color: rgb(252, 252, 252);
+    --header-line-color: #ded9d2;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --text-color: rgb(55,55,55);
+    --text-color-secondary: rgb(85, 85, 85);
+
     --corner-radius: 10px;
     --corner-radius-secondary: 6px;
 }
 
-@media (prefers-color-scheme: light) {
-    body {
-        --background-color: rgb(255,255,255);
-        --card-background-color: rgb(252, 252, 252);
-        --header-line-color: #ded9d2;
-        --border-color: rgba(0, 0, 0, 0.1);
-        --text-color: rgb(55,55,55);
-        --text-color-secondary: rgb(85, 85, 85);
-    }
-}
-
 @media (prefers-color-scheme: dark) {
-    body {
+    :root {
         --background-color: #141414;
         --card-background-color: rgb(23, 23, 23);
         --header-line-color: #21262d;
         --border-color: rgba(255, 255, 255, 0.1);
         --text-color: rgb(200,200,200);
         --text-color-secondary: rgb(170, 170, 170);
+        color-scheme: dark;
     }
 }
 
 body {
     background-color: var(--background-color);  
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 16px;    
     color: var(--text-color);      
     line-height: 1.5;   
-    margin: 0px 25px 25px;   
+    margin: 0;
+}
+
+#root {
+    background: radial-gradient(ellipse 80% 50% at 50% -10%,rgba(120,119,198,0.3), transparent);
+    background-attachment: fixed;
 }
 
 @keyframes fadeIn {
@@ -39,12 +42,13 @@ body {
         opacity: 0;
     }
     100% {
-        opacity: 1;
+       opacity: 1;
     }
 }
 
 .cheatsheet-article {
-    animation: 0.4s ease-out 0s 1 fadeIn;
+    margin: 0px 25px 25px;  
+    animation: 0.4s ease-out 0s fadeIn;
 }
 
 h1,
@@ -66,7 +70,6 @@ code {
 }
 
 pre {
-    background-color: var(--card-background-color);
     border-radius: var(--corner-radius-secondary);
     border: 2px var(--border-color) solid;
     padding: 0.5em;  
@@ -76,19 +79,19 @@ pre {
     margin: 0;
     word-wrap: normal;
     white-space: pre-line;
+    box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
 }
 
 .table-of-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .table-of-content a {
-    background-color: var(--card-background-color);
+    color: dodgerblue;
     border: 2px var(--border-color) solid;
     border-radius: var(--corner-radius);
     text-decoration: none;
-    color: dodgerblue;
     transition: 0.5s linear;
     padding: 2px 7.5px 2px 7.5px;
     margin: 1.5px;
@@ -99,9 +102,11 @@ pre {
 }
 
 .cards-holder {
+    animation: 0.4s ease-out 0s fadeIn;
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
     justify-content: center;
 }
 
@@ -110,18 +115,20 @@ pre {
     color: var(--text-color);
 }
 
+
+
 .card {
-    background-color: var(--card-background-color);
     border: 2px var(--border-color) solid;
     border-radius: var(--corner-radius);
     cursor: pointer;
     display: flex;
     height: 260px;
     flex-direction: column;
-    position: relative;
     width: 300px;  
     vertical-align: middle;
     transition: 0.5s;  
+    box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
+    position: relative;
 }
 
 .card:hover {
@@ -163,12 +170,15 @@ pre {
 }
 
 .nav-bar {
+    position: sticky;
+    top: 0;
     display: flex;
-    border-radius: var(--corner-radius);
-    margin-top: 15px;
-    border: 2px var(--border-color) solid;
+    backdrop-filter: blur(30px) saturate(120%);
+    margin: 0px;
+    border-bottom: 2px var(--border-color) solid;
     padding: 0.5rem 0px 0.5rem 0px;
     align-items: center;
+    justify-content: center;
 }
 
 .nav-bar h1 {
@@ -177,12 +187,11 @@ pre {
 }
 
 .nav-bar-container {
-    margin-left: 1rem;
     display: flex;
+    margin-left: 1rem;
     flex-wrap: wrap;
     gap: 8px;
-    align-items: center;
-    width: 100%;
+    width: auto;
 }
 
 .nav-bar-container a {
@@ -190,7 +199,6 @@ pre {
     display: flex;
     min-width: 5rem;
     text-decoration: none;
-    cursor: pointer;
     padding: 0.4rem;
     border: 2px var(--border-color) solid;
     border-radius: var(--corner-radius);
@@ -203,23 +211,14 @@ pre {
     border: 2px solid cornflowerblue;
 }
 
-@keyframes expand {
-    0% {
-        width: 5%;
-    }
-    100% {
-        width: 7%;
-    }
-}
-
 .nav-bar-container > .nav-bar-active { 
-    animation: 0.4s ease-out 0s 1 expand;
     border: 2px solid cornflowerblue;
     width: 7%;
 }
 
 table {
     border-collapse: collapse;
+    box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
 }
 
 td, th {
