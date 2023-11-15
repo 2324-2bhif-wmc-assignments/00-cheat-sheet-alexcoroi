@@ -115,8 +115,6 @@ pre {
     color: var(--text-color);
 }
 
-
-
 .card {
     border: 2px var(--border-color) solid;
     border-radius: var(--corner-radius);
@@ -174,6 +172,7 @@ pre {
     top: 0;
     display: flex;
     backdrop-filter: blur(30px) saturate(120%);
+    -webkit-backdrop-filter: blur(30px) saturate(120%);
     margin: 0px;
     border-bottom: 2px var(--border-color) solid;
     padding: 0.5rem 0px 0.5rem 0px;
