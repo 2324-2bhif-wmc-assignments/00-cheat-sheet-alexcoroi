@@ -7,6 +7,7 @@
     --text-color: rgb(55,55,55);
     --text-color-secondary: rgb(85, 85, 85);
 
+    --box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
     --corner-radius: 10px;
     --corner-radius-secondary: 6px;
 }
@@ -47,8 +48,18 @@ body {
 }
 
 .cheatsheet-article {
-    margin: 0px 25px 25px;  
+    margin: 0vh 5vw 4vh;  
     animation: 0.4s ease-out 0s fadeIn;
+}
+
+.cheatsheet-article > section {
+    border: 2px solid var(--border-color);
+    border-radius: var(--corner-radius);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
 }
 
 h1,
@@ -79,7 +90,7 @@ pre {
     margin: 0;
     word-wrap: normal;
     white-space: pre-line;
-    box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 .table-of-content {
@@ -94,7 +105,7 @@ pre {
     text-decoration: none;
     transition: 0.5s linear;
     padding: 2px 7.5px 2px 7.5px;
-    margin: 1.5px;
+    margin: 0rem 0.25rem 0rem 0rem;
 }
 
 .table-of-content a:hover {    
@@ -125,7 +136,7 @@ pre {
     width: 300px;  
     vertical-align: middle;
     transition: 0.5s;  
-    box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
+    box-shadow: var(--box-shadow);
     position: relative;
 }
 
@@ -217,7 +228,7 @@ pre {
 
 table {
     border-collapse: collapse;
-    box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 td, th {
