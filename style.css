@@ -105,7 +105,7 @@ pre {
     text-decoration: none;
     transition: 0.5s linear;
     padding: 2px 7.5px 2px 7.5px;
-    margin: 0rem 0.25rem 0rem 0rem;
+    margin: 0.15rem;
 }
 
 .table-of-content a:hover {    
