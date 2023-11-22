@@ -9,24 +9,23 @@
 </head>
 <body>
 <div id="root">
-    <div class="nav-bar">
+    <div id="nav-bar">
         <a style="text-decoration: none;" href="../index.html"><h1>Cheatsheet</h1></a>
-        <div class="nav-bar-container">
-            <a class="nav-bar-active" href="general-article.html">General</a>
-            <a href="html-article.html">HTML</a>
-            <a href="css-article.html">CSS</a>
+        <div>
+            <a class="card hoverable" id="nav-bar-active" href="general-article.html">General</a>
+            <a class="card hoverable" href="html-article.html">HTML</a>
+            <a class="card hoverable" href="css-article.html">CSS</a>
         </div>
     </div>
-    <article class="cheatsheet-article">
+    <article id="cheatsheet-article">
         <h2>General</h2>
-        <h4>Table of content</h4>
-        <div class="table-of-content">
-            <a href="#world-wide-web-general">World Wide Web General</a>
-            <a href="#web-server">Web Server</a>
-            <a href="#web-client">Web Client</a>
-            <a href="#hello-world">Hello World</a>
+        <div id="table-of-content">
+            <a class="card hoverable" href="#world-wide-web-general">World Wide Web General</a>
+            <a class="card hoverable" href="#web-server">Web Server</a>
+            <a class="card hoverable" href="#web-client">Web Client</a>
+            <a class="card hoverable" href="#hello-world">Hello World</a>
         </div>
-        <section id="world-wide-web-general">
+        <section id="world-wide-web-general" class="glowing card drop-in" style="--order: 0">
             <h3>Word Wide Web General</h3>
             <p>Technologies like HTML, the URL system, transfer protocols like HTTP made the word wide web successful at CERN and later at the whole internet.</p>
             <p>The resources of a website like the html pages and the images are adressed with uniform resource locators (URLs).</p>
@@ -35,7 +34,7 @@
                 <br>&lt;transfer protocol like "https"&gt; :// &lt;subdomain like "www"&gt; . &lt;domain like "google"&gt; . &lt;top level domain&gt; / &lt;path to an page or asset (images)&gt; ? &lt;paramters seperated by an &&gt; # &lt;fragment (section of a page) like general&gt;
             </p>
         </section>
-        <section id="web-server">
+        <section id="web-server" class="glowing card drop-in" style="--order: 1">
             <h3>Web Server</h3>
             <p>A web server is a computer with special software connected to the internet.</p>
             <p>
@@ -49,7 +48,7 @@
                 The content files can also be stored on external cloud storage systems.
             </p>
         </section>
-        <section id="web-client">
+        <section id="web-client" class="glowing card drop-in" style="--order: 2">
             <h3>Web Client</h3>
             <p>
                 A web client is a software that can send and receive web requests like https requests, http error codes and can typically render them.
@@ -65,7 +64,7 @@
                 that enhance the browser to support special services from the site like Adobe Flash Player.
             </p>
         </section>
-        <section id="hello-world">
+        <section id="hello-world" class="glowing card drop-in" style="--order: 3">
             <h3>Hello World</h3>
             <p>
                 The <code>&lt;head&gt;</code> element is a container for metadata (data about data) and is placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag.
