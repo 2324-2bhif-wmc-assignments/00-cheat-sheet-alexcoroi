@@ -1,35 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="dark" lang="en">
     <head>
         <title>Bootstrap - Cheatsheet</title>
-        <link rel="icon" href="../assets/images/favicon.ico">
+        <link href="../assets/images/favicon.ico" rel="icon">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../style.css">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
     </head>
     <body>
-        <div id="root">
-            <div id="nav-bar">
-                <a style="text-decoration: none;" href="../index.html"><h1>Cheatsheet</h1></a>
-                <div>
-                    <a class="card hoverable" href="general-article.html">General</a>
-                    <a class="card hoverable" href="html-article.html">HTML</a>
-                    <a class="card hoverable" href="css-article.html">CSS</a>
-                    <a class="card hoverable" id="nav-bar-active" href="bootstrap-article.html">Bootstrap</a>
-                </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img class="d-inline-block align-text-top" src="../assets/images/favicon.ico" alt="Logo" width="30" height="30">
+                <span>Cheatsheet</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="general-article.html">General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html-article.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="css-article.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active">Bootstrap</a>
+                    </li>
+                </ul>
             </div>
-            <article id="cheatsheet-article">
-                <h2>Bootstrap</h2>
-                <div id="table-of-content">
-                    <a class="card hoverable" href="#general">General</a>
-                </div>
-                <section id="general" class="glowing card drop-in" style="--order: 0">
-                    <h3>General</h3>
-                    <p>
-                        TODO
-                    </p>
-                </section>
-            </article>
         </div>
+    </nav>
+    <div class="container mt-4">
+        <h1>Bootstrap</h1>
+        <p class="lead">This page was created with Bootstrap</p>
+        <div id="table-of-content">
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" href="#general">General</a>
+                <a class="list-group-item list-group-item-action" href="#containers">Containers</a>
+                <a class="list-group-item list-group-item-action" href="#typography">Typography</a>
+            </div>
+        </div>
+        <section class="mt-3" id="general">
+            <h2>General</h2>
+            <hr>
+            <p>
+                Bootstrap is a CSS framework to quickly set up a website with predefined CSS classes and ids. It can be embedded in two ways.
+                The first way is to save the needed files on the own server and link it to the HTML file. The second way is to link the CDN to the html file.
+            </p>
+        </section>
+        <section id="containers">
+            <h2>Containers</h2>
+            <hr>
+            <p>
+                Usually you want to put your content to the middle and not have it up against the side.
+                You could handle that with CSS (e.g. with margins).
+                In Bootstrap, you have a class container which handles that for us.
+                Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Bootstrap requires elements which wrap the content of the webpage. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+            </p>
+            <pre style="white-space: pre-line" class="text-warning">
+                &lt;div class="container"&gt;
+                &lt;h2&gt;Containers&lt;/h2&gt;
+                &lt;/div&gt;
+            </pre>
+        </section>
+        <section id="typography">
+            <h2>Typography</h2>
+            <hr>
+            <h3>Headings</h3>
+            <p>
+                Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+            </p>
+            <pre style="white-space: pre-line" class="text-warning">
+                &lt;h3&gt;
+                Fancy display heading
+                &lt;small class="text-body-secondary"&gt;With faded secondary text&lt;/small&gt;
+                &lt;/h3&gt;
+            </pre>
+            <h3>Highlight Text</h3>
+            <p>To highlight text you can use the lead class. It makes a paragraph stand out.</p>
+            <pre style="white-space: pre-line" class="text-warning">
+                &lt;p class="lead"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt;/p&gt;
+            </pre>
+        </section>
+        <section id="navbar-section">
+            <h2>Navbar Component</h2>
+            <p>
+                A navbar is a component that is included in most websites of the web.
+                Bootstrap has a predefined component for a navbar that is also responsive to the screen width.
+            </p>
+            <p>Here is a sample code of a navbar coded in Bootstrap</p>
+            <pre style="white-space: pre-line" class="text-warning">
+                &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
+                  &lt;div class="container-fluid"&gt;
+                    &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+                    &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                    &lt;/button&gt;
+                    &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                      &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item dropdown"&gt;
+                          &lt;a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                            Dropdown
+                          &lt;/a&gt;
+                          &lt;ul class="dropdown-menu"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                          &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link disabled" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                        &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;form class="d-flex" role="search"&gt;
+                        &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+                        &lt;button class="btn btn-outline-success" type="submit"&gt;Search&lt;/button&gt;
+                      &lt;/form&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/nav&gt;
+            </pre>
+        </section>
+    </div>
     </body>
+    <script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>
