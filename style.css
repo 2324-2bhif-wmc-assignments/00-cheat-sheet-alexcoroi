@@ -206,4 +206,5 @@ code {
     padding: 0.1rem;
     border-radius: var(--corner-radius-secondary);
     border: 1px solid var(--border-color);
+    color: aliceblue;
 }
