@@ -1,25 +1,13 @@
 :root {
-    color-scheme: light;
-    --background-color: rgb(255,255,255);
-    --card-background-color: rgb(252, 252, 252);
-    --header-line-color: #ded9d2;
-    --border-color: rgba(0, 0, 0, 0.1);
-    --text-color: rgb(55,55,55);
-    --text-color-secondary: rgb(85, 85, 85);
+    color-scheme: dark;
+    --background-color: #141414;
+    --card-background-color: rgb(23, 23, 23);
+    --header-line-color: #21262d;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: rgb(200, 200, 200);
+    --text-color-secondary: rgb(170, 170, 170);
     --corner-radius: 10px;
     --corner-radius-secondary: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #141414;
-        --card-background-color: rgb(23, 23, 23);
-        --header-line-color: #21262d;
-        --border-color: rgba(255, 255, 255, 0.1);
-        --text-color: rgb(200,200,200);
-        --text-color-secondary: rgb(170, 170, 170);
-        color-scheme: dark;
-    }
 }
 
 html {
@@ -29,9 +17,9 @@ html {
 body {
     background-color: var(--background-color);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;    
-    color: var(--text-color);      
-    line-height: 1.5;   
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -81,7 +69,7 @@ h1, h2, h3, h4 {
 #nav-bar > div > a {
     text-align: center;
     min-width: 5rem;
-    font-weight: bold;
+    font-weight: bold
 }
 
 #nav-bar-active {
@@ -101,6 +89,11 @@ h1, h2, h3, h4 {
     scroll-margin-top: 4.5rem;
     margin-top: 1rem;
     padding: 1rem;
+    transition: 0.3s;
+}
+
+#cheatsheet-article > section:hover {
+    box-shadow: 0 0 0.2rem 0.2rem rgba(130, 130, 255, 0.3);
 }
 
 #table-of-content {
