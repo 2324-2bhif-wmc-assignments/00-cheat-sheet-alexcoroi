@@ -19,207 +19,210 @@
                 </div>
             </div>
             <article id="cheatsheet-article">
-                <h2>CSS</h2>
-                <div id="table-of-content">
-                    <a class="card hoverable" href="#general">General</a>
-                    <a class="card hoverable" href="#combinators">Combinators</a>
-                    <a class="card hoverable" href="#pseudo-classes">Pseudo Classes</a>
-                    <a class="card hoverable" href="#text-formatting">Text Formatting</a>
-                    <a class="card hoverable" href="#background-formatting">Background Formatting</a>
-                    <a class="card hoverable" href="#gradients">Gradients</a>
-                    <a class="card hoverable" href="#fonts">Fonts</a>
-                    <a class="card hoverable" href="#box-model">Box Model</a>
-                    <a class="card hoverable" href="#floating">Floating</a>
-                    <a class="card hoverable" href="#flexbox">Flexbox</a>
-                    <a class="card hoverable" href="#animations">Animations</a>
+                <div id="sidebar">
+                    <h2>CSS</h2>
+                    <div id="table-of-content">
+                        <a class="card hoverable" href="#general">General</a>
+                        <a class="card hoverable" href="#combinators">Combinators</a>
+                        <a class="card hoverable" href="#pseudo-classes">Pseudo Classes</a>
+                        <a class="card hoverable" href="#text-formatting">Text Formatting</a>
+                        <a class="card hoverable" href="#background-formatting">Background Formatting</a>
+                        <a class="card hoverable" href="#gradients">Gradients</a>
+                        <a class="card hoverable" href="#fonts">Fonts</a>
+                        <a class="card hoverable" href="#box-model">Box Model</a>
+                        <a class="card hoverable" href="#floating">Floating</a>
+                        <a class="card hoverable" href="#flexbox">Flexbox</a>
+                        <a class="card hoverable" href="#animations">Animations</a>
+                    </div>
                 </div>
-                <section id="general" class="glowing card drop-in" style="--order: 0">
-                    <h3>General</h3>
-                    <p>
-                        CSS stands for Cascading Style Sheets and defines the style of a webpage. 
-                        Typically the css file is called style.css or styles.css. 
-                        To use a css it must be linked within the HTML head declaration with a <code>&lt;link&gt;</code> element.<br>
-                        The syntax is the following: <code>&lt;link rel="stylesheet" href="path to css"&gt;</code>.
-                    </p>
-                    <p>
-                        A CSS rule consists of a selector and a declaration block. 
-                        A declaration block can contain multiple declarations that give properties a value and are seperated by a ; (semi colon).                    
-                    </p>
-                    <pre class="glowing code card">
+                <div id="content">
+                    <section id="general" class="glowing card drop-in" style="--order: 0">
+                        <h3>General</h3>
+                        <p>
+                            CSS stands for Cascading Style Sheets and defines the style of a webpage.
+                            Typically the css file is called style.css or styles.css.
+                            To use a css it must be linked within the HTML head declaration with a <code>&lt;link&gt;</code> element.<br>
+                            The syntax is the following: <code>&lt;link rel="stylesheet" href="path to css"&gt;</code>.
+                        </p>
+                        <p>
+                            A CSS rule consists of a selector and a declaration block.
+                            A declaration block can contain multiple declarations that give properties a value and are seperated by a ; (semi colon).
+                        </p>
+                        <pre class="glowing code card">
                         selector {
                             &nbsp;declaration (property : value);
                             &nbsp;declaration2 (property2 : value);
-                        }                   
+                        }
                     </pre>
-                </section>
-                <section id="combinators" class="glowing card drop-in" style="--order: 1">
-                    <h3>Combinators</h3>
-                    <p>There are 4 combinators: descendant, direct child, adjacent sibling, sibling.</p>                
-                    <pre class="glowing code card">
+                    </section>
+                    <section id="combinators" class="glowing card drop-in" style="--order: 1">
+                        <h3>Combinators</h3>
+                        <p>There are 4 combinators: descendant, direct child, adjacent sibling, sibling.</p>
+                        <pre class="glowing code card">
                         section p { /*All &lt;p&gt; in section are selected*/
                             &nbsp;font-size = 13px;
                         }
-                                                            
+
                         section > p { /*All &lt;p&gt; that are direct childs of section are selected*/
                             &nbsp;font-size = 16px;
                         }
-                                                            
+
                         section + p { /*The first &lt;p&gt; after the section element is selected*/
                             &nbsp;font-size = 12px;
                         }
-                                                            
+
                         section ~ p { /*All next siblings to section that are &lt;p&gt; are selected*/
                             &nbsp;font-size = 14px;
-                        }                                   
+                        }
                     </pre>
-                </section>
-                <section id="pseudo-classes" class="glowing card drop-in" style="--order: 2">
-                    <h3>Pseudo Classes</h3>
-                    <p><code>&lt;a&gt;</code> does have following pseudo classes:</p>
-                    <ul>
-                        <li>
-                            <strong>:link</strong>: Is applied when the element wasnt clicked and not visited
-                        </li>
-                        <li>
-                            <strong>:visited</strong>: Is applied when the element was already clicked and visited
-                        </li>
-                        <li>
-                            <strong>:hover</strong>: Is applied when the element is hovered with the mouse
-                        </li>
-                        <li>
-                            <strong>:active</strong>: Is applied when the element is selected
-                        </li>
-                    </ul>
-                    <p>Note that it is important to write this pseudo classes in this order to function correctly.</p>
-                </section>
-                <section id="text-formatting" class="glowing card drop-in" style="--order: 3">
-                    <h3>Text Formatting</h3>
-                    <p>
-                        To color the Text the <code>color</code> property is used.
-                        The value can be:
-                    </p>
-                    <ul>
-                        <li>a color name - like "red"</li>
-                        <li>a HEX value - like "#ff0000"</li>
-                        <li>an RGB value - like "rgb(255,0,0)"</li>
-                    </ul>
-                    <p>Following properties can be edited to align the text:</p>
-                    <ul>
-                        <li><strong>direction</strong>: Specifies the text direction/writing direction</li>
-                        <li><strong>text-align</strong>: Specifies the horizontal alignment of text</li>
-                        <li><strong>text-align-last</strong>: Specifies how to align the last line of a text</li>
-                        <li><strong>unicode-bidi</strong>: Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</li>
-                        <li><strong>vertical-align</strong>: Sets the vertical alignment of an element</li>
-                    </ul>
-                </section>
-                <section id="background-formatting" class="glowing card drop-in" style="--order: 4">
-                    <h3>Background Formatting</h3>
-                    <ul>
-                        <li><strong>background-color:</strong> Specifies the background color of an element.</li>
-                        <li><strong>background-image:</strong> Sets an image as the background for an element.</li>
-                        <li><strong>background-repeat:</strong> Determines how the background image is repeated:
-                            <ul>
-                              <li><em>repeat:</em> The image repeats both vertically and horizontally (default).</li>
-                              <li><em>repeat-x:</em> The image repeats horizontally only.</li>
-                              <li><em>repeat-y:</em> The image repeats vertically only.</li>
-                              <li><em>no-repeat:</em> The image is not repeated, appearing only once.</li>
-                              <li><em>round:</em> Tiles the image without cutting or stretching it.</li>
-                              <li><em>space:</em> Tiles the image without cutting or stretching it and spaces the tiles evenly.</li>
-                            </ul>
-                          </li>
-                          <li><strong>background-attachment:</strong> Defines whether the background image scrolls with the content:
-                            <ul>
-                              <li><em>scroll:</em> The background image scrolls with the content (default behavior).</li>
-                              <li><em>fixed:</em> The background image remains fixed as the content scrolls.</li>
-                              <li><em>local:</em> The background scrolls with the element's content, not the page.</li>
-                            </ul>
-                          </li>
-                          <li><strong>background-position:</strong> Specifies the starting position of the background image:
-                            <ul>
-                              <li><em>x-axis y-axis:</em> You can use keywords like top, bottom, center, left, right, or specific values (e.g., top right, center center, 10px 20px).</li>
-                              <li><em>x-axis:</em> Shorthand for horizontal positioning (e.g., left, center, right).</li>
-                              <li><em>y-axis:</em> Shorthand for vertical positioning (e.g., top, center, bottom).</li>
-                            </ul>
-                          </li>
-                    </ul>  
-                </section>
-                <section id="gradients" class="glowing card drop-in" style="--order: 5">
-                    <h3>Gradients</h3>
-                    <p>
-                        Gradients are a progressive transition between two or more colors.
-                        You can choose between three types of gradients: linear (created with the <code>linear-gradient()</code> function),
-                        radial (created with the <code>radial-gradient()</code> function), and conic (created with the <code>conic-gradient()</code> function).
-                    </p>
-                    <h4>Linear gradient</h4>
-                    <pre class="glowing card code">
+                    </section>
+                    <section id="pseudo-classes" class="glowing card drop-in" style="--order: 2">
+                        <h3>Pseudo Classes</h3>
+                        <p><code>&lt;a&gt;</code> does have following pseudo classes:</p>
+                        <ul>
+                            <li>
+                                <strong>:link</strong>: Is applied when the element wasnt clicked and not visited
+                            </li>
+                            <li>
+                                <strong>:visited</strong>: Is applied when the element was already clicked and visited
+                            </li>
+                            <li>
+                                <strong>:hover</strong>: Is applied when the element is hovered with the mouse
+                            </li>
+                            <li>
+                                <strong>:active</strong>: Is applied when the element is selected
+                            </li>
+                        </ul>
+                        <p>Note that it is important to write this pseudo classes in this order to function correctly.</p>
+                    </section>
+                    <section id="text-formatting" class="glowing card drop-in" style="--order: 3">
+                        <h3>Text Formatting</h3>
+                        <p>
+                            To color the Text the <code>color</code> property is used.
+                            The value can be:
+                        </p>
+                        <ul>
+                            <li>a color name - like "red"</li>
+                            <li>a HEX value - like "#ff0000"</li>
+                            <li>an RGB value - like "rgb(255,0,0)"</li>
+                        </ul>
+                        <p>Following properties can be edited to align the text:</p>
+                        <ul>
+                            <li><strong>direction</strong>: Specifies the text direction/writing direction</li>
+                            <li><strong>text-align</strong>: Specifies the horizontal alignment of text</li>
+                            <li><strong>text-align-last</strong>: Specifies how to align the last line of a text</li>
+                            <li><strong>unicode-bidi</strong>: Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</li>
+                            <li><strong>vertical-align</strong>: Sets the vertical alignment of an element</li>
+                        </ul>
+                    </section>
+                    <section id="background-formatting" class="glowing card drop-in" style="--order: 4">
+                        <h3>Background Formatting</h3>
+                        <ul>
+                            <li><strong>background-color:</strong> Specifies the background color of an element.</li>
+                            <li><strong>background-image:</strong> Sets an image as the background for an element.</li>
+                            <li><strong>background-repeat:</strong> Determines how the background image is repeated:
+                                <ul>
+                                    <li><em>repeat:</em> The image repeats both vertically and horizontally (default).</li>
+                                    <li><em>repeat-x:</em> The image repeats horizontally only.</li>
+                                    <li><em>repeat-y:</em> The image repeats vertically only.</li>
+                                    <li><em>no-repeat:</em> The image is not repeated, appearing only once.</li>
+                                    <li><em>round:</em> Tiles the image without cutting or stretching it.</li>
+                                    <li><em>space:</em> Tiles the image without cutting or stretching it and spaces the tiles evenly.</li>
+                                </ul>
+                            </li>
+                            <li><strong>background-attachment:</strong> Defines whether the background image scrolls with the content:
+                                <ul>
+                                    <li><em>scroll:</em> The background image scrolls with the content (default behavior).</li>
+                                    <li><em>fixed:</em> The background image remains fixed as the content scrolls.</li>
+                                    <li><em>local:</em> The background scrolls with the element's content, not the page.</li>
+                                </ul>
+                            </li>
+                            <li><strong>background-position:</strong> Specifies the starting position of the background image:
+                                <ul>
+                                    <li><em>x-axis y-axis:</em> You can use keywords like top, bottom, center, left, right, or specific values (e.g., top right, center center, 10px 20px).</li>
+                                    <li><em>x-axis:</em> Shorthand for horizontal positioning (e.g., left, center, right).</li>
+                                    <li><em>y-axis:</em> Shorthand for vertical positioning (e.g., top, center, bottom).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id="gradients" class="glowing card drop-in" style="--order: 5">
+                        <h3>Gradients</h3>
+                        <p>
+                            Gradients are a progressive transition between two or more colors.
+                            You can choose between three types of gradients: linear (created with the <code>linear-gradient()</code> function),
+                            radial (created with the <code>radial-gradient()</code> function), and conic (created with the <code>conic-gradient()</code> function).
+                        </p>
+                        <h4>Linear gradient</h4>
+                        <pre class="glowing card code">
                         .diagonal-gradient {
                              background: linear-gradient(to bottom right, blue, pink);
                         }
                     </pre>
-                    <pre class="glowing card code">
+                        <pre class="glowing card code">
                         .angled-gradient {
                             background: linear-gradient(70deg, blue, pink);
                         }
                     </pre>
-                </section>
-                <section id="fonts" class="glowing card drop-in" style="--order: 6">
-                    <h3>Fonts</h3>                
-                    <p>
-                        There are 2 font types: Sans-Serif and Serif fonts.
-                    </p>
-                    <img src="../assets/images/serif_vs_sanserif.png" alt="Serif vs Sans-Serif" style="width: 200px">
-                    <p>
-                        Serif fonts have small strokes at the edges of each letter, whereas sans-serif fonts are just clean lines without strokes. Generally sans-serif fonts are easier to read on displays.
-                    </p>
-                </section>
-                <section id="box-model" class="glowing card drop-in" style="--order: 7">
-                    <h3>Box Model</h3>
-                    <p>
-                        The box model is a model that describes the content of an element.
-                        It consists of the following parts: 
-                    </p>
-                    <ul>
-                        <li><strong>Content</strong>: The content of the element, where text and images appear</li>
-                        <li><strong>Padding</strong>: Is the space between the content and the border. The padding is transparent</li>
-                        <li><strong>Border</strong>: A border that goes around the padding and content</li>
-                        <li><strong>Margin</strong>: Is the space between the border and other content. The margin is transparent</li>
-                    </ul>
-                    <p>
-                        In addition to the box model, a distinction can be made between inline and block elements.
-                    </p>
-                    <ul>
-                        <li>
-                            <strong>Inline elements</strong>: Do not start on a new line and only take up as much width as necessary. 
-                            Following elements are inline elements per default: <code>img</code>, <code>strong</code>, <code>em</code>, <code>span</code>.
-                        </li>
-                        <li>
-                            <strong>Block elements</strong>: Start on a new line and take up as much width as possible. 
-                            Following elements are block elements per default: <code>article</code>, <code>section</code>, <code>p</code>, <code>h1-6</code>, <code>div</code>.
-                        </li>
-                    </ul>
-                    <p>
-                        The display type (inline/block) can be changed with the <code>display</code> property.
-                    </p>
-                </section>
-                <section id="floating" class="glowing card drop-in" style="--order: 8">
-                    <h3>Floating</h3>
-                    <p>
-                        The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. 
-                        The element is removed from the normal flow of the page, though still remaining a part of the flow 
-                    </p>
-                </section>
-                <section id="flexbox" class="glowing card drop-in" style="--order: 9">
-                    <h3>Flexbox</h3>
-                    <img style="width: 65%" src="../assets/images/css-flexbox-poster.png" alt="Flexbox page">
-                </section>
-                <section id="animations" class="glowing card drop-in" style="--order: 10">
-                    <h3>Animations</h3>
-                    <p>
-                        An animation can be used to modify a object over a period of time.
-                        It consists out of keyframes that are interpolated in the given time.
-                    </p>
-                    <p>Sample code to create keyframes:</p>
-                    <pre class="glowing card code">
+                    </section>
+                    <section id="fonts" class="glowing card drop-in" style="--order: 6">
+                        <h3>Fonts</h3>
+                        <p>
+                            There are 2 font types: Sans-Serif and Serif fonts.
+                        </p>
+                        <img src="../assets/images/serif_vs_sanserif.png" alt="Serif vs Sans-Serif" style="width: 200px">
+                        <p>
+                            Serif fonts have small strokes at the edges of each letter, whereas sans-serif fonts are just clean lines without strokes. Generally sans-serif fonts are easier to read on displays.
+                        </p>
+                    </section>
+                    <section id="box-model" class="glowing card drop-in" style="--order: 7">
+                        <h3>Box Model</h3>
+                        <p>
+                            The box model is a model that describes the content of an element.
+                            It consists of the following parts:
+                        </p>
+                        <ul>
+                            <li><strong>Content</strong>: The content of the element, where text and images appear</li>
+                            <li><strong>Padding</strong>: Is the space between the content and the border. The padding is transparent</li>
+                            <li><strong>Border</strong>: A border that goes around the padding and content</li>
+                            <li><strong>Margin</strong>: Is the space between the border and other content. The margin is transparent</li>
+                        </ul>
+                        <p>
+                            In addition to the box model, a distinction can be made between inline and block elements.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Inline elements</strong>: Do not start on a new line and only take up as much width as necessary.
+                                Following elements are inline elements per default: <code>img</code>, <code>strong</code>, <code>em</code>, <code>span</code>.
+                            </li>
+                            <li>
+                                <strong>Block elements</strong>: Start on a new line and take up as much width as possible.
+                                Following elements are block elements per default: <code>article</code>, <code>section</code>, <code>p</code>, <code>h1-6</code>, <code>div</code>.
+                            </li>
+                        </ul>
+                        <p>
+                            The display type (inline/block) can be changed with the <code>display</code> property.
+                        </p>
+                    </section>
+                    <section id="floating" class="glowing card drop-in" style="--order: 8">
+                        <h3>Floating</h3>
+                        <p>
+                            The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.
+                            The element is removed from the normal flow of the page, though still remaining a part of the flow
+                        </p>
+                    </section>
+                    <section id="flexbox" class="glowing card drop-in" style="--order: 9">
+                        <h3>Flexbox</h3>
+                        <img style="width: 65%" src="../assets/images/css-flexbox-poster.png" alt="Flexbox page">
+                    </section>
+                    <section id="animations" class="glowing card drop-in" style="--order: 10">
+                        <h3>Animations</h3>
+                        <p>
+                            An animation can be used to modify a object over a period of time.
+                            It consists out of keyframes that are interpolated in the given time.
+                        </p>
+                        <p>Sample code to create keyframes:</p>
+                        <pre class="glowing card code">
                         @keyframes animation-name {
                             &nbsp;0% {
                                 &nbsp;&nbsp;transform: translateY(1rem);
@@ -229,11 +232,12 @@
                             &nbsp;}
                         }
                     </pre>
-                    <p>To apply the keyframes to a html element use the animation property.</p>
-                    <pre class="glowing card code">
+                        <p>To apply the keyframes to a html element use the animation property.</p>
+                        <pre class="glowing card code">
                         animation: animation-name 1s;
                     </pre>
-                </section>
+                    </section>
+                </div>
             </article>
         </div>
     </body>

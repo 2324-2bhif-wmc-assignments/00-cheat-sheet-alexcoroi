@@ -19,145 +19,148 @@
                 </div>
             </div>
             <article id="cheatsheet-article">
-                <h2>HTML</h2>
-                <div id="table-of-content">
-                    <a class="card hoverable" href="#general">General</a>
-                    <a class="card hoverable" href="#links">Links</a>
-                    <a class="card hoverable" href="#lists">Lists</a>
-                    <a class="card hoverable" href="#tables">Tables</a>
+                <div id="sidebar">
+                    <h2>HTML</h2>
+                    <div id="table-of-content" >
+                        <a class="card hoverable" href="#general">General</a>
+                        <a class="card hoverable" href="#links">Links</a>
+                        <a class="card hoverable" href="#lists">Lists</a>
+                        <a class="card hoverable" href="#tables">Tables</a>
+                    </div>
                 </div>
-                <section id="general" class="glowing card drop-in" style="--order: 0">
-                    <h3>General</h3>
-                    <p>
-                        HTML stands for Hyper Text Markup Language and defines the layout and the elements of a webpage.
-                        A HTML page must begin with a <code>&lt;!DOCTYPE&gt;</code> tag. It defines the HTML version used in this document.<br>
-                        For HTML 5 it would be <code>&lt;!DOCTYPE html&gt;</code>
-                    </p>
-                    <p>
-                        Every html document contains the root element <code>&lt;html&gt;</code>, which has a start tag <code>&lt;html&gt;</code> and an end tag <code>&lt;/html&gt;</code>. 
-                        Basically every HTML element is everything from the start tag (<code>&lt;tagname&gt;</code>) to the end tag (<code>&lt;/tagname&gt;</code>).
-                        HTML elements can also be nested, so that a HTML element can contain multiple elements inside it.
-                    </p>
-                    <p>
-                        Attributes provide additional information about a html element or are even necessary for void elements like <code>&lt;meta&gt;</code> (name; charset) or <code>&lt;img&gt;</code> (src). 
-                        Attributes are always defined in the start tag and are written as following: <code>name="value"</code>.
-                    </p>                
-                </section>
-                <section id="links" class="glowing card drop-in" style="--order: 1">
-                    <h3>Links</h3>
-                    <p>
-                        HTML links are hyperlinks. You can click on a link and jump to another document.
-                    </p>
-                    <p>
-                        The HTML <code>&lt;a&gt;</code> tag defines a hyperlink. It has the following syntax:
-                        <br>
-                        <code>&lt;a href="url">link text&lt;/a&gt;</code>
-                    </p>
-    
-                    <p>
-                        The <code>&lt;target&gt;</code> attribute specifies where to open the linked document.
-                        The <code>&lt;target&gt;</code> attribute can have one of the following values:
-                    </p>
-                    <ul>
-                        <li>_self - Default. Opens the document in the same window/tab as it was clicked</li>
-                        <li>_blank - Opens the document in a new window or tab</li>
-                        <li>_parent - Opens the document in the parent frame</li>
-                        <li>_top - Opens the document in the full body of the window</li>
-                    </ul>                
-                </section>
-                <section id="lists" class="glowing card drop-in" style="--order: 2">
-                    <h3>Lists</h3>
-                    <p>There are 3 kinds of lists:</p>
-                    <table class="glowing">
-                        <thead>
-                            <tr>
-                                <th>Kind of list</th>
-                                <th>Tag and meaning</th>
-                                <th>Examples</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Unordered list</td>
-                                <td><code>&lt;ul&gt;</code>: The list items (<code>&lt;li&gt;</code>) are not ordered (bullet points)</td>
-                                <td>
-                                    <p>List with <code>list-style:disc</code></p>
-                                    <ul>
-                                        <li>Item 1</li>
-                                        <li>Item 2</li>
-                                    </ul>
-                                    <p>List with <code>list-style:circle</code></p>
-                                    <ul style="list-style:circle;">
-                                        <li>Item 1</li>
-                                        <li>Item 2</li>
-                                    </ul>
-                                    <p>List with <code>list-style:square</code></p>
-                                    <ul style="list-style: square;">
-                                        <li>Item 1</li>
-                                        <li>Item 2</li>
-                                    </ul>
-                                </td>                            
-                            </tr>
-                            <tr>
-                                <td>Ordered list</td>
-                                <td><code>&lt;ol&gt;</code>: The list items (<code>&lt;li&gt;</code>) are ordered with numbers</td>
-                                <td>
-                                    <p>List with <code>list-style-type:decimal</code> (default)</p>
-                                    <ol>
-                                        <li>Item 1</li>
-                                        <li>Item 2</li>
-                                    </ol>
-                                    <p>List with <code>list-style-type:lower-alpha</code></p>
-                                    <ol style="list-style-type:lower-alpha;">
-                                        <li>Item 1</li>
-                                        <li>Item 2</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Description list</td>
-                                <td><code>&lt;dl&gt;</code>: Description list which contains terms and descriptions</td>
-                                <td>
-                                    <dl>
-                                        <dt>Term (<code>&lt;dt&gt;</code>)</dt>
-                                        <dd>Description (<code>&lt;dd&gt;</code>)</dd>
-                                        <dt>Description list</dt>
-                                        <dd>Is something people use sometimes.</dd>
-                                    </dl>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>You can style the bullet points of a list with <code>list-style-type</code> and can set the position of the bullet points with <code>list-style-position</code>.</p>
-                </section>
-                <section id="tables" class="glowing card drop-in" style="--order: 3">
-                    <h3>Tables</h3>
-                    <p>Here is the general structure of a table:</p>
-                    <table class="glowing">
-                        <thead>
-                            <tr>
-                                <th>Table Header 1</th>
-                                <th>Table Header 2</th>
-                                <th>Table Header 3</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Table cell 1</td>
-                                <td>Table cell 2</td>
-                                <td>Table cell 3</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td>Table footer cell 1</td>
-                                <td>Table footer cell 2</td>
-                                <td>Table footer cell 3</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <p>Source code:</p>
-                    <pre class="glowing code card">
+                <div id="content">
+                    <section id="general" class="glowing card drop-in" style="--order: 0">
+                        <h3>General</h3>
+                        <p>
+                            HTML stands for Hyper Text Markup Language and defines the layout and the elements of a webpage.
+                            A HTML page must begin with a <code>&lt;!DOCTYPE&gt;</code> tag. It defines the HTML version used in this document.<br>
+                            For HTML 5 it would be <code>&lt;!DOCTYPE html&gt;</code>
+                        </p>
+                        <p>
+                            Every html document contains the root element <code>&lt;html&gt;</code>, which has a start tag <code>&lt;html&gt;</code> and an end tag <code>&lt;/html&gt;</code>.
+                            Basically every HTML element is everything from the start tag (<code>&lt;tagname&gt;</code>) to the end tag (<code>&lt;/tagname&gt;</code>).
+                            HTML elements can also be nested, so that a HTML element can contain multiple elements inside it.
+                        </p>
+                        <p>
+                            Attributes provide additional information about a html element or are even necessary for void elements like <code>&lt;meta&gt;</code> (name; charset) or <code>&lt;img&gt;</code> (src).
+                            Attributes are always defined in the start tag and are written as following: <code>name="value"</code>.
+                        </p>
+                    </section>
+                    <section id="links" class="glowing card drop-in" style="--order: 1">
+                        <h3>Links</h3>
+                        <p>
+                            HTML links are hyperlinks. You can click on a link and jump to another document.
+                        </p>
+                        <p>
+                            The HTML <code>&lt;a&gt;</code> tag defines a hyperlink. It has the following syntax:
+                            <br>
+                            <code>&lt;a href="url">link text&lt;/a&gt;</code>
+                        </p>
+
+                        <p>
+                            The <code>&lt;target&gt;</code> attribute specifies where to open the linked document.
+                            The <code>&lt;target&gt;</code> attribute can have one of the following values:
+                        </p>
+                        <ul>
+                            <li>_self - Default. Opens the document in the same window/tab as it was clicked</li>
+                            <li>_blank - Opens the document in a new window or tab</li>
+                            <li>_parent - Opens the document in the parent frame</li>
+                            <li>_top - Opens the document in the full body of the window</li>
+                        </ul>
+                    </section>
+                    <section id="lists" class="glowing card drop-in" style="--order: 2">
+                        <h3>Lists</h3>
+                        <p>There are 3 kinds of lists:</p>
+                        <table class="glowing">
+                            <thead>
+                                <tr>
+                                    <th>Kind of list</th>
+                                    <th>Tag and meaning</th>
+                                    <th>Examples</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Unordered list</td>
+                                    <td><code>&lt;ul&gt;</code>: The list items (<code>&lt;li&gt;</code>) are not ordered (bullet points)</td>
+                                    <td>
+                                        <p>List with <code>list-style:disc</code></p>
+                                        <ul>
+                                            <li>Item 1</li>
+                                            <li>Item 2</li>
+                                        </ul>
+                                        <p>List with <code>list-style:circle</code></p>
+                                        <ul style="list-style:circle;">
+                                            <li>Item 1</li>
+                                            <li>Item 2</li>
+                                        </ul>
+                                        <p>List with <code>list-style:square</code></p>
+                                        <ul style="list-style: square;">
+                                            <li>Item 1</li>
+                                            <li>Item 2</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ordered list</td>
+                                    <td><code>&lt;ol&gt;</code>: The list items (<code>&lt;li&gt;</code>) are ordered with numbers</td>
+                                    <td>
+                                        <p>List with <code>list-style-type:decimal</code> (default)</p>
+                                        <ol>
+                                            <li>Item 1</li>
+                                            <li>Item 2</li>
+                                        </ol>
+                                        <p>List with <code>list-style-type:lower-alpha</code></p>
+                                        <ol style="list-style-type:lower-alpha;">
+                                            <li>Item 1</li>
+                                            <li>Item 2</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Description list</td>
+                                    <td><code>&lt;dl&gt;</code>: Description list which contains terms and descriptions</td>
+                                    <td>
+                                        <dl>
+                                            <dt>Term (<code>&lt;dt&gt;</code>)</dt>
+                                            <dd>Description (<code>&lt;dd&gt;</code>)</dd>
+                                            <dt>Description list</dt>
+                                            <dd>Is something people use sometimes.</dd>
+                                        </dl>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>You can style the bullet points of a list with <code>list-style-type</code> and can set the position of the bullet points with <code>list-style-position</code>.</p>
+                    </section>
+                    <section id="tables" class="glowing card drop-in" style="--order: 3">
+                        <h3>Tables</h3>
+                        <p>Here is the general structure of a table:</p>
+                        <table class="glowing">
+                            <thead>
+                                <tr>
+                                    <th>Table Header 1</th>
+                                    <th>Table Header 2</th>
+                                    <th>Table Header 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Table cell 1</td>
+                                    <td>Table cell 2</td>
+                                    <td>Table cell 3</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Table footer cell 1</td>
+                                    <td>Table footer cell 2</td>
+                                    <td>Table footer cell 3</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <p>Source code:</p>
+                        <pre class="glowing code card">
                         &lt;table&gt;
                             &emsp; &lt;thead&gt;
                                 &emsp; &emsp; &lt;tr&gt;
@@ -182,15 +185,16 @@
                             &emsp; &lt;/tfoot&gt;
                         &lt;/table&gt;
                     </pre>
-                    <p>
-                        To add a solid border around the cells you have to a border to the th and hd elements. 
-                        The border property has following syntax: <code>border: &lt;size&gt; &lt;type&gt; &lt;color&gt;</code>.
-                        <br>A solid black border that is 1 px thick would be: <code>border: 1px solid black</code>.
-                    </p>
-                    <p>
-                        If the borders from the cells overlap you can use the <code>border-collapse</code> property to collapse the borders into a single border.
-                    </p>
-                </section>
+                        <p>
+                            To add a solid border around the cells you have to a border to the th and hd elements.
+                            The border property has following syntax: <code>border: &lt;size&gt; &lt;type&gt; &lt;color&gt;</code>.
+                            <br>A solid black border that is 1 px thick would be: <code>border: 1px solid black</code>.
+                        </p>
+                        <p>
+                            If the borders from the cells overlap you can use the <code>border-collapse</code> property to collapse the borders into a single border.
+                        </p>
+                    </section>
+                </div>
             </article>
         </div>
     </body>

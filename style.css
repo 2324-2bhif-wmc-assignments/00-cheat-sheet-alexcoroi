@@ -21,6 +21,7 @@ body {
     color: var(--text-color);
     line-height: 1.5;
     margin: 0;
+
 }
 
 a {
@@ -39,6 +40,7 @@ h1, h2, h3, h4 {
 
 #root {
     background: radial-gradient(ellipse 80% 50% at 50% -10%,rgba(120,119,198,0.3), transparent) fixed;
+    height: 100%;
 }
 
 #nav-bar {
@@ -77,35 +79,32 @@ h1, h2, h3, h4 {
 }
 
 #cheatsheet-article {
+    display: flex;
+    flex-wrap: wrap;
     scroll-behavior: smooth;
-    margin: 2rem 5vw 4vh;
+    margin: 2rem 2vw 4vh;
 }
 
 #cheatsheet-article h1, #cheatsheet-article h2, #cheatsheet-article h3, #cheatsheet-article h4 {
     border-bottom: 1px solid var(--header-line-color);
 }
 
-#cheatsheet-article > section {
+#content > section {
     scroll-margin-top: 4.5rem;
     margin-top: 1rem;
     padding: 1rem;
     transition: 0.3s;
 }
 
-#cheatsheet-article > section:hover {
+#content > section:hover {
     box-shadow: 0 0 0.2rem 0.2rem rgba(130, 130, 255, 0.3);
 }
 
 #table-of-content {
     margin-top: 1rem;
     display: flex;
-    flex-wrap: wrap;
-}
-
-#table-of-content a {
-    text-align: center;
-    min-width: 3.5rem;
-    margin: 0.15rem;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .card {
@@ -170,7 +169,7 @@ h1, h2, h3, h4 {
     0% {
         opacity: 0;
         visibility: visible;
-        transform: translateX(-100vw);
+        transform: translateX(100vw);
     }
     100% {
         opacity: 1;
@@ -200,4 +199,30 @@ code {
     border-radius: var(--corner-radius-secondary);
     border: 1px solid var(--border-color);
     color: aliceblue;
+}
+
+#sidebar {
+    width: 15%;
+    position: fixed;
+}
+
+#content {
+    margin-left: 17%;
+    width: 80%;
+}
+
+@media only screen and (max-width: 50rem) {
+    /* For mobile phones: */
+    #sidebar, #content {
+        width: 100%;
+        margin: 0;
+    }
+
+    #sidebar {
+        position: relative;
+    }
+
+    #content {
+        margin-top: 2rem;
+    }
 }
