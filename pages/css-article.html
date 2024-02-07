@@ -5,6 +5,7 @@
         <link rel="icon" href="../assets/images/favicon.ico">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/dark.min.css">
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>  
@@ -48,33 +49,33 @@
                             A CSS rule consists of a selector and a declaration block.
                             A declaration block can contain multiple declarations that give properties a value and are seperated by a ; (semi colon).
                         </p>
-                        <pre class="glowing code card">
-                        selector {
-                            &nbsp;declaration (property : value);
-                            &nbsp;declaration2 (property2 : value);
-                        }
-                    </pre>
+                        <pre class="glowing code card"><code>
+                            selector {
+                                declaration (property : value);
+                                declaration2 (property2 : value);
+                            }
+                        </code></pre>
                     </section>
                     <section id="combinators" class="glowing card drop-in" style="--order: 1">
                         <h3>Combinators</h3>
                         <p>There are 4 combinators: descendant, direct child, adjacent sibling, sibling.</p>
-                        <pre class="glowing code card">
-                        section p { /*All &lt;p&gt; in section are selected*/
-                            &nbsp;font-size = 13px;
-                        }
+                        <pre class="glowing card"><code class="language-css">
+                            section p { /*All &lt;p&gt; in section are selected*/
+                                font-size = 13px;
+                            }
 
-                        section > p { /*All &lt;p&gt; that are direct childs of section are selected*/
-                            &nbsp;font-size = 16px;
-                        }
+                            section > p { /*All &lt;p&gt; that are direct childs of section are selected*/
+                                font-size = 16px;
+                            }
 
-                        section + p { /*The first &lt;p&gt; after the section element is selected*/
-                            &nbsp;font-size = 12px;
-                        }
+                            section + p { /*The first &lt;p&gt; after the section element is selected*/
+                                font-size = 12px;
+                            }
 
-                        section ~ p { /*All next siblings to section that are &lt;p&gt; are selected*/
-                            &nbsp;font-size = 14px;
-                        }
-                    </pre>
+                            section ~ p { /*All next siblings to section that are &lt;p&gt; are selected*/
+                                font-size = 14px;
+                            }
+                        </code></pre>
                     </section>
                     <section id="pseudo-classes" class="glowing card drop-in" style="--order: 2">
                         <h3>Pseudo Classes</h3>
@@ -154,16 +155,28 @@
                             radial (created with the <code>radial-gradient()</code> function), and conic (created with the <code>conic-gradient()</code> function).
                         </p>
                         <h4>Linear gradient</h4>
-                        <pre class="glowing card code">
-                        .diagonal-gradient {
-                             background: linear-gradient(to bottom right, blue, pink);
-                        }
-                    </pre>
-                        <pre class="glowing card code">
-                        .angled-gradient {
-                            background: linear-gradient(70deg, blue, pink);
-                        }
-                    </pre>
+                        <pre class="glowing card"><code>
+                            .diagonal-gradient {
+                                 background: linear-gradient(to bottom right, blue, pink);
+                            }
+                        </code></pre>
+                        <pre class="glowing card"><code>
+                            .angled-gradient {
+                                background: linear-gradient(70deg, blue, pink);
+                            }
+                        </code></pre>
+                        <h4>Radial gradient</h4>
+                        <pre class="glowing card"><code>
+                            .radial-gradient {
+                                background: radial-gradient(red, yellow, rgb(30 144 255));
+                            }
+                        </code></pre>
+                        <h4>Conical gradient</h4>
+                        <pre class="glowing card"><code>
+                            .conic-gradient {
+                                background: conic-gradient(pink, coral, lime);
+                            }
+                        </code></pre>
                     </section>
                     <section id="fonts" class="glowing card drop-in" style="--order: 6">
                         <h3>Fonts</h3>
@@ -222,23 +235,25 @@
                             It consists out of keyframes that are interpolated in the given time.
                         </p>
                         <p>Sample code to create keyframes:</p>
-                        <pre class="glowing card code">
-                        @keyframes animation-name {
-                            &nbsp;0% {
-                                &nbsp;&nbsp;transform: translateY(1rem);
-                            &nbsp;}
-                            &nbsp;100% {
-                                &nbsp;transform: translateX(12rem);
-                            &nbsp;}
-                        }
-                    </pre>
+                        <pre class="glowing card"><code>
+                            @keyframes animation-name {
+                                0% {
+                                    transform: translateY(1rem);
+                                }
+                                100% {
+                                    transform: translateX(12rem);
+                                }
+                            }
+                        </code></pre>
                         <p>To apply the keyframes to a html element use the animation property.</p>
-                        <pre class="glowing card code">
-                        animation: animation-name 1s;
-                    </pre>
+                        <pre class="glowing card"><code>
+                            animation: animation-name 1s;
+                        </code></pre>
                     </section>
                 </div>
             </article>
         </div>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <script src="../script.js"></script>
     </body>
 </html>

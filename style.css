@@ -121,13 +121,6 @@ h1, h2, h3, h4 {
     box-shadow: 0 2px 8px 0 rgba(130, 130, 255, 0.3);
 }
 
-.code {
-    width: fit-content;
-    word-wrap: break-word;
-    white-space: pre-line;
-    padding: 0.5em;
-}
-
 #cards-holder {
     margin: 2rem 20% 0 20%;
     display: flex;
@@ -193,13 +186,6 @@ td, th {
     padding: 0.5rem;
 }
 
-code {
-    padding: 0.1rem;
-    border-radius: var(--corner-radius-secondary);
-    border: 1px solid var(--border-color);
-    color: aliceblue;
-}
-
 #sidebar {
     width: 15%;
     position: fixed;
@@ -224,4 +210,8 @@ code {
     #content {
         margin-top: 2rem;
     }
+}
+
+.hljs {
+    background-color: transparent;
 }

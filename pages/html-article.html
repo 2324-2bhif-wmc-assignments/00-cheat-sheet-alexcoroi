@@ -5,6 +5,7 @@
         <link rel="icon" href="../assets/images/favicon.ico">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/dark.min.css">
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>  
@@ -160,31 +161,31 @@
                             </tfoot>
                         </table>
                         <p>Source code:</p>
-                        <pre class="glowing code card">
-                        &lt;table&gt;
-                            &emsp; &lt;thead&gt;
-                                &emsp; &emsp; &lt;tr&gt;
-                                    &emsp; &emsp; &emsp; &lt;th&gt;Table Header 1&lt;/th&gt;
-                                    &emsp; &emsp; &emsp; &lt;th&gt;Table Header 2&lt;/th&gt;
-                                    &emsp; &emsp; &emsp; &lt;th&gt;Table Header 3&lt;/th&gt;
-                                &emsp; &emsp; &lt;/tr&gt;
-                            &emsp; &lt;/thead&gt;
-                            &emsp; &lt;tbody&gt;
-                                &emsp; &emsp; &lt;tr&gt;
-                                    &emsp; &emsp; &emsp; &lt;td&gt;Table cell 1&lt;/td&gt;
-                                    &emsp; &emsp; &emsp; &lt;td&gt;Table cell 2&lt;/td&gt;
-                                    &emsp; &emsp; &emsp; &lt;td&gt;Table cell 3&lt;/td&gt;
-                                &emsp; &emsp; &lt;/tr&gt;
-                            &emsp; &lt;/tbody&gt;
-                            &emsp; &lt;tfoot&gt;
-                                &emsp; &emsp; &lt;tr&gt;
-                                    &emsp; &emsp; &emsp; &lt;td&gt;Table footer cell 1&lt;/td&gt;
-                                    &emsp; &emsp; &emsp; &lt;td&gt;Table footer cell 2&lt;/td&gt;
-                                    &emsp; &emsp; &emsp; &lt;td&gt;Table footer cell 3&lt;/td&gt;
-                                &emsp; &emsp; &lt;/tr&gt;
-                            &emsp; &lt;/tfoot&gt;
-                        &lt;/table&gt;
-                    </pre>
+                        <pre class="glowing code"><code class="language-html">
+                            &lt;table&gt;
+                                &lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th&gt;Table Header 1&lt;/th&gt;
+                                        &lt;th&gt;Table Header 2&lt;/th&gt;
+                                        &lt;th&gt;Table Header 3&lt;/th&gt;
+                                   &lt;/tr&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;Table cell 1&lt;/td&gt;
+                                        &lt;td&gt;Table cell 2&lt;/td&gt;
+                                        &lt;td&gt;Table cell 3&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                                &lt;tfoot&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;Table footer cell 1&lt;/td&gt;
+                                        &lt;td&gt;Table footer cell 2&lt;/td&gt;
+                                        &lt;td&gt;Table footer cell 3&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tfoot&gt;
+                            &lt;/table&gt;
+                        </code></pre>
                         <p>
                             To add a solid border around the cells you have to a border to the th and hd elements.
                             The border property has following syntax: <code>border: &lt;size&gt; &lt;type&gt; &lt;color&gt;</code>.
@@ -197,5 +198,7 @@
                 </div>
             </article>
         </div>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <script src="../script.js"></script>
     </body>
 </html>
